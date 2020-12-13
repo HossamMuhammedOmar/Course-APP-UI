@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 
-class Sidebar {
-  Sidebar({this.title, this.background, this.icon});
+class SidebarModel {
+  SidebarModel({this.title, this.background, this.icon});
   String title;
   LinearGradient background;
   Icon icon;
 }
 
 var sidebarItem = [
-  Sidebar(
+  SidebarModel(
     title: 'Home',
     background: LinearGradient(
         begin: Alignment.topLeft,
@@ -22,7 +22,7 @@ var sidebarItem = [
       color: Colors.white,
     ),
   ),
-  Sidebar(
+  SidebarModel(
     title: 'Courses',
     background: LinearGradient(
       begin: Alignment.topRight,
@@ -37,7 +37,7 @@ var sidebarItem = [
       color: Colors.white,
     ),
   ),
-  Sidebar(
+  SidebarModel(
     title: 'Subscribe',
     background: LinearGradient(
       begin: Alignment.topLeft,
@@ -52,7 +52,7 @@ var sidebarItem = [
       color: Colors.white,
     ),
   ),
-  Sidebar(
+  SidebarModel(
     title: 'Settings',
     background: LinearGradient(
       begin: Alignment.topLeft,

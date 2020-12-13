@@ -1,6 +1,10 @@
+import 'package:course_ui/models/sidebar_model.dart';
 import 'package:flutter/material.dart';
 
 class SidebarWidget extends StatelessWidget {
+  SidebarWidget({@required this.item});
+  final SidebarModel item;
+
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -11,27 +15,17 @@ class SidebarWidget extends StatelessWidget {
           padding: EdgeInsets.all(10.0),
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(14.0),
-            gradient: LinearGradient(
-                begin: Alignment.topLeft,
-                end: Alignment.bottomRight,
-                colors: [
-                  Color(0XFF686ee2),
-                  Color(0XFF382f60),
-                ]),
+            gradient: item.background,
           ),
-          child: Icon(
-            Icons.home,
-            color: Colors.white,
-          ),
+          child: item.icon,
         ),
         SizedBox(width: 12.0),
         Container(
           child: Text(
-            'Home',
+            item.title,
             style: TextStyle(
               fontSize: 16.0,
               fontWeight: FontWeight.w800,
-              color: Color(0XFF2c3e50),
             ),
           ),
         ),
