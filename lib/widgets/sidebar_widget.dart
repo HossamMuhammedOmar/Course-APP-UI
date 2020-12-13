@@ -1,3 +1,4 @@
+import 'package:course_ui/constants.dart';
 import 'package:course_ui/models/sidebar_model.dart';
 import 'package:flutter/material.dart';
 
@@ -23,10 +24,7 @@ class SidebarWidget extends StatelessWidget {
         Container(
           child: Text(
             item.title,
-            style: TextStyle(
-              fontSize: 16.0,
-              fontWeight: FontWeight.w800,
-            ),
+            style: kCalloutLabelStyle,
           ),
         ),
       ],
